@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Santri Baru | Mahad Al-Manshuroh</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">AL-MANSHUROH<span>.</span></div>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="pendaftaran.html" class="active">Pendaftaran</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class=" sub-hero2">
+        <div class="container">
+            <h4>PENERIMAAN SANTRI BARU TA 2026/2027</h4>
+            <h1>Informasi Pendaftaran & Biaya</h1>
+            <p>Waktu Pendaftaran: 1 November 2025 - 31 Januari 2026</p>
+        </div>
+    </section>
+
+    <section class="container cost-cards">
+        <div class="cost-card">
+            <div class="card-head">SD</div>
+            <div class="card-body">
+                <p>Biaya Pendaftaran: <strong>Rp200.000</strong></p>
+                <hr>
+                <ul>
+                    <li>Uang Pangkal: Rp2.700.000</li>
+                    <li>SPP Bulan Pertama: Rp250.000</li>
+                </ul>
+                <div class="total-box">
+                    <span>Total Uang Pertama</span>
+                    <p>Rp2.950.000</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cost-card">
+            <div class="card-head">SMP(Ikhwan/Akhwat)</div>
+            <div class="card-body">
+                <p>Biaya Pendaftaran: <strong>Rp200.000</strong></p>
+                <hr>
+                <ul>
+                    <li>Uang Pangkal: Rp4.500.000</li>
+                    <li>SPP Bulan Pertama: Rp700.000</li>
+                </ul>
+                <div class="total-box">
+                    <span>Total Uang Pertama</span>
+                    <p>Rp5.200.000</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cost-card">
+            <div class="card-head">SMA (Akhwat)</div>
+            <div class="card-body">
+                <p>Biaya Pendaftaran: <strong>Rp200.000</strong></p>
+                <hr>
+                <ul>
+                    <li>Uang Pangkal: Rp4.500.000</li>
+                    <li>SPP Bulan Pertama: Rp700.000</li>
+                </ul>
+                <div class="total-box">
+                    <span>Total Uang Pertama</span>
+                    <p>Rp5.200.000</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cost-card">
+            <div class="card-head">SMA (Putra)</div>
+            <div class="card-body">
+                <p>Biaya Pendaftaran: <strong>Rp300.000</strong></p>
+                <hr>
+                <ul>
+                    <li>Uang Pangkal: Rp5.200.000</li>
+                    <li>SPP Bulan Pertama: Rp850.000</li>
+                </ul>
+                <div class="total-box">
+                    <span>Total Uang Pertama</span>
+                    <p>Rp6.050.000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container registration-box" style="padding-top: 20px;">
+        <div class="reg-info">
+            <div class="info-group">
+                <h4>Syarat Administrasi:</h4>
+                <ul class="doc-list">
+                    <li>Fotokopi Akta Kelahiran (2 Lembar)</li>
+                    <li>Fotokopi Kartu Keluarga (2 Lembar)</li>
+                    <li>Fotokopi KTP Orang Tua (2 Lembar)</li>
+                    <li>Pas Foto Background Biru 3x4 (4 Lembar)</li>
+                    <li>Membayar Biaya Pendaftaran</li>
+                    <li>Mengisi Formulir Pendaftaran Online/Offline</li>
+                </ul>
+            </div>
+            <div class="contact-box">
+                <p>Informasi Lebih Lanjut:</p>
+                <strong>0896-9942-3145 (Abu Zafran)</strong>
+            </div>
+        </div>
+
+        <div class="reg-form">
+            <h3>Formulir Cepat</h3>
+            <form id="registration-form">
+                <div class="form-group">
+                    <label>Nama Lengkap Calon Siswa</label>
+                    <input type="text" name="Nama_Siswa" placeholder="Masukkan nama sesuai ijazah/akta" required>
+                </div>
+                <div class="form-group">
+                    <label>Pilih Jenjang</label>
+                    <select name="Jenjang" required>
+                        <option value="">Pilih Jenjang...</option>
+                        <option value="SD">SD (Sekolah Dasar)</option>
+                        <option value="SMP Putra">SMP (Putra)</option>
+                        <option value="SMP Akhwat">SMP (Akhwat)</option>
+                        <option value="SMA Putra">SMA (Putra)</option>
+                        <option value="SMA Akhwat">SMA (Akhwat)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Email Aktif</label>
+                    <input type="email" name="Email" id="email-input" placeholder="contoh: budi@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>WhatsApp Orang Tua</label>
+                    <input type="tel" name="WhatsApp" id="whatsapp-input" placeholder="Contoh: 0812345xxx" required>
+                </div>
+                <button type="submit" class="btn-submit" id="submit-btn">Kirim Data Pendaftaran</button>
+            </form>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            const scriptURL =
+                'https://script.google.com/macros/s/AKfycbw39Uea2fgm9t9WRn3lctzmIi4-ysI1Xua5dz8BCwE5ho8bygKlvRC_CsIRET2thSRtUg/exec'
+            const form = document.forms['registration-form']
+            const btnSubmit = document.getElementById('submit-btn')
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+
+                const waInput = document.getElementById('whatsapp-input').value;
+                const emailInput = document.getElementById('email-input').value;
+
+                // 1. Validasi Email (Format standar)
+                const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!regexEmail.test(emailInput)) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Email Tidak Valid',
+                        text: 'Pastikan format email sudah benar (pake @ dan .com/.id)',
+                        confirmButtonColor: '#d33'
+                    });
+                    return;
+                }
+
+                // 2. Validasi WA: Apakah isinya cuma angka?
+                const hanyaAngka = /^[0-9]+$/;
+                if (!hanyaAngka.test(waInput)) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Nomor WA Salah!',
+                        text: 'Tolong masukkan angka saja tanpa simbol atau spasi.',
+                        confirmButtonColor: '#d33'
+                    });
+                    return;
+                }
+
+                // 3. Validasi WA: Wajib diawali 08
+                if (waInput.substring(0, 2) !== "08") {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Nomor Tidak Valid',
+                        text: 'Nomor HP Indonesia harus diawali dengan angka 08.',
+                        confirmButtonColor: '#f39c12'
+                    });
+                    return;
+                }
+
+                // 4. Validasi WA: Panjang nomor (10-14 digit)
+                if (waInput.length < 10 || waInput.length > 14) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Digit Tidak Sesuai',
+                        text: 'Nomor WA harus 10-14 digit.',
+                        confirmButtonColor: '#f39c12'
+                    });
+                    return;
+                }
+
+                // --- PROSES KIRIM ---
+                Swal.fire({
+                    title: 'Mohon Tunggu...',
+                    text: 'Sedang mengirim data pendaftaran',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading()
+                    }
+                })
+
+                btnSubmit.disabled = true
+                btnSubmit.innerHTML = "Sedang Mengirim..."
+
+                fetch(scriptURL, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        mode: 'no-cors'
+                    })
+                    .then(() => {
+                        btnSubmit.disabled = false
+                        btnSubmit.innerHTML = "Kirim Data Pendaftaran"
+
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Alhamdulillah!',
+                            text: 'Data pendaftaran berhasil terkirim ke sistem.',
+                            showClass: {
+                                popup: 'animate__animated animate__bounceIn'
+                            },
+                            hideClass: {
+                                popup: 'animate__animated animate__fadeOutUp'
+                            },
+                            confirmButtonColor: '#00468b'
+                        })
+
+                        form.reset()
+                    })
+                    .catch(error => {
+                        btnSubmit.disabled = false
+                        btnSubmit.innerHTML = "Kirim Data Pendaftaran"
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Waduh...',
+                            text: 'Gagal kirim data, silakan coba lagi!',
+                            confirmButtonColor: '#d33'
+                        })
+                        console.error('Error!', error.message)
+                    })
+            })
+
+            // Filter otomatis angka WA
+            document.getElementById('whatsapp-input').addEventListener('input', function (e) {
+                this.value = this.value.replace(/[^0-9]/g, '');
+                if (this.value.length > 14) {
+                    this.value = this.value.slice(0, 14);
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                // 1. Munculin body perlahan
+                document.body.classList.add('fade-in');
+
+                // 2. Munculin form dengan efek naik sedikit (optional)
+                const formCard = document.querySelector('.reg-form');
+                if (formCard) {
+                    setTimeout(() => {
+                        formCard.classList.add('appear');
+                    }, 200); // delay dikit biar estetik
+                }
+            });
+        </script>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mahad Al-Manshuroh Cirebon - Yayasan Al Ghuroba Al Islamiyyah.</p>
+        <a href="https://wa.me/6289699423145?text=Assalamualaikum%20Admin%2C%20saya%20ingin%20tanya%20seputar%20pendaftaran%20di%20Mahad%20Al-Manshuroh"
+            class="wa-float" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            <span class="wa-text">Tanya Admin</span>
+        </a>
+    </footer>
+    
+</body>
+
+</html>

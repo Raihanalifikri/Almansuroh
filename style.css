@@ -1,0 +1,768 @@
+/* Reset & General Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-blue: #00468b;
+    --dark-black: #121212;
+    --clean-white: #ffffff;
+    --soft-gray: #f9f9f9;
+}
+
+body {
+    background-color: var(--clean-white);
+    color: var(--dark-black);
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background: var(--dark-black);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--clean-white);
+    font-size: 24px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.logo:hover{
+    color: var(--primary-blue);
+    transition: 0.5s;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--clean-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-blue);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/2.jpeg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    color: var(--clean-white);
+}
+
+
+
+.hero-content h1 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.hero-content h1 span {
+    color: var(--primary-blue);
+    transition: 0.3s; /* Biar pas kursor lepas tetep smooth */
+    display: inline-block; /* Opsional: biar bisa dikasih efek gerak dikit */
+}
+
+.hero-content h1 span:hover {
+    color: white;
+    transition-duration: 0.2s; /* Pas kursor nempel lebih cepet dikit */
+}
+
+.hero-btns {
+    margin-top: 25px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--primary-blue);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { opacity: 0.8; }
+.btn-outline:hover { background: white; color: black; }
+
+/* Info Cards */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: -50px; /* Floating effect */
+}
+
+.card {
+    background: white;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: left;
+    border-bottom: 4px solid var(--primary-blue);
+}
+
+.card .number {
+    font-size: 40px;
+    font-weight: 700;
+    color: #8a8989;
+    display: block;
+}
+
+
+/* Visi Misi Section */
+.visi-misi {
+    padding: 100px 0;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.visi-img .img-box {
+    width: 450px;
+    height: 500px;
+    background: #ccc;
+    border-radius: 20px;
+    background-image: url('image/13.png');
+    background-size: cover;
+}
+
+.visi-text h5 { color: var(--primary-blue); }
+.visi-text h2 { font-size: 36px; margin: 10px 0; }
+
+.target-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.target-list li {
+    background: var(--soft-gray);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 5px solid var(--primary-blue);
+}
+
+
+/* Footer */
+footer {
+    background: var(--dark-black);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+/* Styling List & Info */
+.mini-list {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.mini-list li::before {
+    content: "✓ ";
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.doc-list {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.doc-list li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.info-group h4 {
+    border-bottom: 2px solid var(--primary-blue);
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.reg-info h5 {
+    color: var(--primary-blue);
+    letter-spacing: 1px;
+}
+
+/* Responsif sederhana untuk HP */
+@media (max-width: 768px) {
+    .registration-box {
+        flex-direction: column;
+    }
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Program Detail Styling --- */
+.sub-hero {
+     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/6.jpeg') no-repeat center center/cover;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    color: var(--clean-white);
+}
+
+.sub-hero .container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.program-section {
+    background: #fff;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.program-header {
+    border-left: 5px solid var(--primary-blue);
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.program-header h2 {
+    font-size: 28px;
+    margin-top: 5px;
+}
+
+.program-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.info-card h4 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.info-card ul {
+    list-style: none;
+}
+
+.info-card ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.info-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+/* --- Price Table --- */
+.table-container {
+    overflow-x: auto;
+}
+
+.full-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+.full-table th, .full-table td {
+    padding: 15px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.full-table th {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.total-row {
+    background: #f0f7ff;
+}
+
+.total-row td {
+    font-size: 18px;
+    color: var(--primary-blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .program-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Styling Header Pendaftaran */
+
+.sub-hero2 {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/12.jpeg') no-repeat center center/cover;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    color: var(--clean-white);
+}
+
+.sub-hero2 .container {
+    text-align: center;
+    padding-top: 50px;
+}
+.sub-hero2 .container h4 {
+     color: var(--primary-blue); letter-spacing: 2px;
+}
+
+/* Cost Cards Layout */
+.cost-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.cost-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.cost-card:hover { transform: translateY(-5px); }
+
+.card-head {
+    background: var(--primary-blue);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-body { padding: 25px; }
+.card-body hr { margin: 15px 0; border: 0; border-top: 1px solid #eee; }
+
+.card-body ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.card-body ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.total-box {
+    background: var(--soft-gray);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.total-box span { font-size: 12px; color: #888; display: block; }
+.total-box p { font-size: 20px; font-weight: 700; color: var(--primary-blue); }
+
+.contact-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: #eef4f9;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-blue);
+}
+
+/* --- Container Utama Pendaftaran --- */
+.registration-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Bagi dua kiri-kanan */
+    gap: 50px;
+    padding: 50px 0;
+    align-items: start;
+}
+
+/* --- Styling Formulir --- */
+.reg-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Kasih shadow biar timbul */
+    border: 1px solid #eee;
+}
+
+.reg-form h3 {
+    margin-bottom: 25px;
+    color: var(--dark-black);
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary-blue);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* --- Grouping Input --- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+}
+
+/* --- Input, Select, & Textarea --- */
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1); /* Efek glowing pas diklik */
+}
+
+/* --- Tombol Submit --- */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #0056b3; /* Warna biru lebih gelap saat hover */
+    transform: translateY(-2px);
+}
+
+/* --- Responsif untuk HP --- */
+@media (max-width: 768px) {
+    .registration-box {
+        grid-template-columns: 1fr; /* Jadi tumpuk atas-bawah kalau di HP */
+        gap: 30px;
+    }
+    
+    .reg-form {
+        padding: 25px;
+    }
+}
+
+
+
+
+/* --- About Page Styles --- */
+.about-hero {
+     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/8.jpeg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about-content { padding: 80px 0; }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.stat-box {
+    background: var(--soft-gray);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border-top: 4px solid var(--primary-blue);
+}
+
+.stat-box h3 { font-size: 32px; color: var(--primary-blue); }
+
+/* --- Gallery Styles --- */
+.gallery-section {
+    background: #f4f4f4;
+    padding: 80px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 70, 139, 0.8);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    transition: 0.4s;
+    font-weight: 600;
+}
+
+.gallery-item:hover .overlay {
+    bottom: 0;
+}
+
+/* Responsive About */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* --- WhatsApp Floating Slide Effect --- */
+.wa-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px; /* Ukuran awal pas cuma logo (bulet) */
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efek mantul dikit */
+    overflow: hidden; /* Biar tulisan yg sembunyi gak kelihatan */
+    max-width: 50px; /* Lebar awal cuma cukup buat icon */
+}
+
+.wa-float img {
+    width: 26px;
+    height: 26px;
+    min-width: 26px; /* Biar icon gak kegencet pas animasi */
+}
+
+.wa-text {
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0;
+    margin-left: 0;
+    transition: all 0.5s ease;
+    max-width: 0; /* Sembunyi total */
+}
+
+/* --- Hover State --- */
+.wa-float:hover {
+    max-width: 200px; /* Memanjang ke samping */
+    padding-right: 25px; /* Kasih ruang buat tulisan */
+    background-color: #128c7e;
+}
+
+.wa-float:hover .wa-text {
+    opacity: 1;
+    margin-left: 10px; /* Muncul dari balik logo */
+    max-width: 150px;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    /* Di HP mending tetep logo aja biar gak ganggu jempol pas scroll */
+    .wa-float:hover {
+        max-width: 50px;
+        padding-right: 12px;
+    }
+    .wa-text {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   CSS RESPONSIVE ONLY (ADD TO BOTTOM OF YOUR FILE)
+   ========================================================================== */
+
+/* 1. Tablet & Laptop Kecil (Max 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        width: 92%;
+    }
+    .about-grid, .registration-box {
+        gap: 30px;
+    }
+}
+
+/* 2. Mobile (HP Gede & Tablet Portait - Max 768px) */
+@media (max-width: 768px) {
+    /* Header & Nav */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    nav ul li a {
+        margin: 0 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: auto;
+        padding: 100px 0;
+    }
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    /* Layout Grids (Jadi 1 Kolom) */
+    .info-cards, 
+    .program-content-grid, 
+    .registration-box, 
+    .about-grid,
+    .visi-misi {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Visi Misi Fix */
+    .visi-misi {
+        text-align: center;
+    }
+    .visi-img .img-box {
+        width: 100%;
+        height: 350px;
+        margin: auto;
+    }
+
+    /* Info Cards Position */
+    .info-cards {
+        margin-top: 20px;
+    }
+
+    /* Buttons */
+    .btn-outline {
+        margin-left: 0;
+        margin-top: 10px;
+        display: block;
+    }
+}
+
+/* 3. Mobile Kecil (HP - Max 480px) */
+@media (max-width: 480px) {
+    /* Font Resize */
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    .visi-text h2 {
+        font-size: 26px;
+    }
+
+    /* Card & Table Padding */
+    .card, .reg-form {
+        padding: 20px;
+    }
+    .full-table th, .full-table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    /* Cost Cards (Paksa 1 Kolom) */
+    .cost-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* WA Float Mobile Fix */
+    .wa-float:hover {
+        max-width: 50px; /* Matikan animasi slide di HP biar gak nutupin layar */
+        padding-right: 12px;
+    }
+    .wa-text {
+        display: none;
+    }
+}
+
+/* Extra: Fix Body Overflow (Mencegah scroll kanan yang bocor) */
+body {
+    overflow-x: hidden;
+}
