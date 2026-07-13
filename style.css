@@ -1,4 +1,6 @@
-/* Reset & General Style */
+/* ==========================================================================
+   01. RESET & GENERAL STYLE
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +19,7 @@ body {
     background-color: var(--clean-white);
     color: var(--dark-black);
     line-height: 1.6;
+    overflow-x: hidden; /* Fix Body Overflow (Mencegah scroll kanan yang bocor) */
 }
 
 .container {
@@ -25,7 +28,10 @@ body {
     max-width: 1200px;
 }
 
-/* Header */
+
+/* ==========================================================================
+   02. HEADER & NAVIGATION
+   ========================================================================== */
 header {
     background: var(--dark-black);
     padding: 20px 0;
@@ -47,7 +53,7 @@ nav {
     transition: 0.5s;
 }
 
-.logo:hover{
+.logo:hover {
     color: var(--primary-blue);
     transition: 0.5s;
 }
@@ -69,7 +75,10 @@ nav ul li a:hover {
     color: var(--primary-blue);
 }
 
-/* Hero Section */
+
+/* ==========================================================================
+   03. HERO SECTION & BUTTONS
+   ========================================================================== */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/2.jpeg') no-repeat center center/cover;
     height: 90vh;
@@ -77,8 +86,6 @@ nav ul li a:hover {
     align-items: center;
     color: var(--clean-white);
 }
-
-
 
 .hero-content h1 {
     font-size: 50px;
@@ -124,7 +131,10 @@ nav ul li a:hover {
 .btn-primary:hover { opacity: 0.8; }
 .btn-outline:hover { background: white; color: black; }
 
-/* Info Cards */
+
+/* ==========================================================================
+   04. INFO CARDS
+   ========================================================================== */
 .info-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -149,7 +159,9 @@ nav ul li a:hover {
 }
 
 
-/* Visi Misi Section */
+/* ==========================================================================
+   05. VISI MISI SECTION
+   ========================================================================== */
 .visi-misi {
     padding: 100px 0;
     display: flex;
@@ -182,16 +194,9 @@ nav ul li a:hover {
 }
 
 
-/* Footer */
-footer {
-    background: var(--dark-black);
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 50px;
-}
-
-/* Styling List & Info */
+/* ==========================================================================
+   06. LIST, INFO, & GENERAL STYLING
+   ========================================================================== */
 .mini-list {
     list-style: none;
     margin-top: 10px;
@@ -226,19 +231,12 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Responsif sederhana untuk HP */
-@media (max-width: 768px) {
-    .registration-box {
-        flex-direction: column;
-    }
-    .program-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
-/* --- Program Detail Styling --- */
+/* ==========================================================================
+   07. PROGRAM DETAIL SECTION
+   ========================================================================== */
 .sub-hero {
-     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/6.jpeg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/6.jpeg') no-repeat center center/cover;
     height: 30vh;
     display: flex;
     align-items: center;
@@ -300,7 +298,7 @@ footer {
     font-weight: bold;
 }
 
-/* --- Price Table --- */
+/* Price Table */
 .table-container {
     overflow-x: auto;
 }
@@ -332,15 +330,10 @@ footer {
     color: var(--primary-blue);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .program-content-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
-/* Styling Header Pendaftaran */
-
+/* ==========================================================================
+   08. PENDAFTARAN (REGISTRATION) SECTION
+   ========================================================================== */
 .sub-hero2 {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/12.jpeg') no-repeat center center/cover;
     height: 30vh;
@@ -353,6 +346,7 @@ footer {
     text-align: center;
     padding-top: 50px;
 }
+
 .sub-hero2 .container h4 {
      color: var(--primary-blue); letter-spacing: 2px;
 }
@@ -360,7 +354,7 @@ footer {
 /* Cost Cards Layout */
 .cost-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -418,7 +412,7 @@ footer {
     border-left: 4px solid var(--primary-blue);
 }
 
-/* --- Container Utama Pendaftaran --- */
+/* Container Utama Pendaftaran */
 .registration-box {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Bagi dua kiri-kanan */
@@ -427,7 +421,7 @@ footer {
     align-items: start;
 }
 
-/* --- Styling Formulir --- */
+/* Styling Formulir */
 .reg-form {
     background: #ffffff;
     padding: 40px;
@@ -445,7 +439,7 @@ footer {
     padding-bottom: 5px;
 }
 
-/* --- Grouping Input --- */
+/* Grouping Input */
 .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -459,7 +453,7 @@ footer {
     font-size: 14px;
 }
 
-/* --- Input, Select, & Textarea --- */
+/* Input, Select, & Textarea */
 .form-group input, 
 .form-group select {
     width: 100%;
@@ -480,7 +474,7 @@ footer {
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1); /* Efek glowing pas diklik */
 }
 
-/* --- Tombol Submit --- */
+/* Tombol Submit */
 .btn-submit {
     width: 100%;
     padding: 15px;
@@ -500,24 +494,12 @@ footer {
     transform: translateY(-2px);
 }
 
-/* --- Responsif untuk HP --- */
-@media (max-width: 768px) {
-    .registration-box {
-        grid-template-columns: 1fr; /* Jadi tumpuk atas-bawah kalau di HP */
-        gap: 30px;
-    }
-    
-    .reg-form {
-        padding: 25px;
-    }
-}
 
-
-
-
-/* --- About Page Styles --- */
+/* ==========================================================================
+   09. ABOUT PAGE STYLES
+   ========================================================================== */
 .about-hero {
-     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/8.jpeg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/8.jpeg') no-repeat center center/cover;
     color: white;
     padding: 80px 0;
     text-align: center;
@@ -543,7 +525,10 @@ footer {
 
 .stat-box h3 { font-size: 32px; color: var(--primary-blue); }
 
-/* --- Gallery Styles --- */
+
+/* ==========================================================================
+   10. GALLERY STYLES
+   ========================================================================== */
 .gallery-section {
     background: #f4f4f4;
     padding: 80px 0;
@@ -591,15 +576,10 @@ footer {
     bottom: 0;
 }
 
-/* Responsive About */
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-}
 
-/* --- WhatsApp Floating Slide Effect --- */
+/* ==========================================================================
+   11. WHATSAPP FLOATING SLIDE EFFECT
+   ========================================================================== */
 .wa-float {
     position: fixed;
     bottom: 25px;
@@ -634,7 +614,7 @@ footer {
     max-width: 0; /* Sembunyi total */
 }
 
-/* --- Hover State --- */
+/* Hover State */
 .wa-float:hover {
     max-width: 200px; /* Memanjang ke samping */
     padding-right: 25px; /* Kasih ruang buat tulisan */
@@ -647,23 +627,24 @@ footer {
     max-width: 150px;
 }
 
-/* Responsif untuk HP */
-@media (max-width: 768px) {
-    /* Di HP mending tetep logo aja biar gak ganggu jempol pas scroll */
-    .wa-float:hover {
-        max-width: 50px;
-        padding-right: 12px;
-    }
-    .wa-text {
-        display: none;
-    }
-}
 
 /* ==========================================================================
-   CSS RESPONSIVE ONLY (ADD TO BOTTOM OF YOUR FILE)
+   12. FOOTER SECTION
+   ========================================================================== */
+footer {
+    background: var(--dark-black);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+
+/* ==========================================================================
+   13. GLOBAL RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 
-/* 1. Tablet & Laptop Kecil (Max 1024px) */
+/* --- Tablet & Laptop Kecil (Max 1024px) --- */
 @media (max-width: 1024px) {
     .container {
         width: 92%;
@@ -673,7 +654,17 @@ footer {
     }
 }
 
-/* 2. Mobile (HP Gede & Tablet Portait - Max 768px) */
+/* --- Mobile Lama / Warisan dari Kode Awal (Max 768px) --- */
+@media (max-width: 768px) {
+    .registration-box {
+        flex-direction: column;
+    }
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Mobile Utama (HP Gede & Tablet Portrait - Max 768px) --- */
 @media (max-width: 768px) {
     /* Header & Nav */
     nav {
@@ -726,9 +717,38 @@ footer {
         margin-top: 10px;
         display: block;
     }
+    
+    /* Responsive Program */
+    .program-content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Responsif Form Pendaftaran */
+    .registration-box {
+        grid-template-columns: 1fr; /* Jadi tumpuk atas-bawah kalau di HP */
+        gap: 30px;
+    }
+    .reg-form {
+        padding: 25px;
+    }
+    
+    /* Responsive About Page */
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    /* WA Float Mobile Fix */
+    .wa-float:hover {
+        max-width: 50px;
+        padding-right: 12px;
+    }
+    .wa-text {
+        display: none;
+    }
 }
 
-/* 3. Mobile Kecil (HP - Max 480px) */
+/* --- Mobile Kecil (HP - Max 480px) --- */
 @media (max-width: 480px) {
     /* Font Resize */
     .hero-content h1 {
@@ -760,9 +780,9 @@ footer {
     .wa-text {
         display: none;
     }
-}
 
-/* Extra: Fix Body Overflow (Mencegah scroll kanan yang bocor) */
-body {
-    overflow-x: hidden;
+    .sub-hero2 .container {
+        font-size: 12px;
+        text-align: center  ;
+    }
 }
